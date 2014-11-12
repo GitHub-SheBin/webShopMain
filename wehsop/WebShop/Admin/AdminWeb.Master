@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminWeb.master.cs" Inherits="WebShop.Admin.AdminWeb" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" />
+<!-- Main Stylesheet -->
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />
+    <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+    <link rel="stylesheet" href="resources/css/invalid.css" type="text/css" media="screen" />
+     <link rel="stylesheet" href="Content/jquery.cleditor.css" type="text/css" media="screen" />
+    <!--                       Javascripts                       -->
+    <!-- jQuery -->
+    <script type="text/javascript"  src="Scripts/jquery-1.8.2.min.js"></script>
+    <!-- jQuery Configuration -->
+    <script type="text/javascript" src="resources/scripts/simpla.jquery.configuration.js"></script>
+    <!-- Facebox jQuery Plugin -->
+    <script type="text/javascript" src="resources/scripts/facebox.js"></script>
+    <!-- jQuery WYSIWYG Plugin -->
+    <script type="text/javascript" src="resources/scripts/jquery.wysiwyg.js"></script>
+    <!-- jQuery Datepicker Plugin -->
+    <script type="text/javascript" src="resources/scripts/jquery.datePicker.js"></script>
+    <script type="text/javascript" src="resources/scripts/jquery.date.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.cleditor.min.js"></script>
+   
+    <style type="text/css">
+        .auto-style1 {
+            width: 99px;
+        }
+        .dropDownlistClass {
+            width:100px;
+            font-size: 13px;
+            border-radius: 4px;
+            float:left;
+        }
+        .inputFloat {
+            float:left;
+            padding-bottom: 0px;
+            height: 21px
+        }
+        .tdText {
+           
+            font-size:initial;
+            font-weight:bold;
+            
+        }
+        .smallClass {
+            float:left;
+            color:#b9b6b6;    
+            margin-left:5px;    
+        }
+        .buttomClass {
+            width: 132px;
+            margin-top: 28px;
+            margin-left: 80%;
+            height: 37px;
+            font-size: initial;
+           
+        }
+        .MakeMarginTop {
+            margin-top:10px;
+        }
+         .ImgUrlFU {
+            float:left;
+            width:300px;
+            height:25px;
+            border-radius: 4px;
+         }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

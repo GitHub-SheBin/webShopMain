@@ -1,0 +1,32 @@
+/* CSS Document */
+.orderlist{ overflow:hidden; zoom:1;border-left:1px solid #ddd;border-bottom:1px solid #ddd;}
+.orderlist li{float:left; height:28px; line-height:28px; text-align:center;}
+.orderhead li{ background:#b7b7b7;border-right:1px solid #b7b7b7;}
+.orderbody li{ padding:20px 0; height:40px; line-height:20px; border-right:1px solid #ddd; }
+.orderlist li.spbh{ width:103px;}
+.orderlist li.spmc{ width:199px;}
+.orderlist li.danjia{ width:89px;}
+.orderlist li.count{ width:79px;}
+.orderlist li.spze{ width:99px;}
+.orderlist li.opera{ width:139px;}
+.orderlist li.ddxx{ width:280px;}
+.orderlist li.ddje{ width:90px;}
+.orderlist li.ddxx{ width:280px;}
+.orderlist li.ddje{ width:90px;}
+.orderlist li.chektim{ width:100px;}
+.orderlist li.isend{ width:100px;}
+
+.orderlist li a{ padding:0 5px; color: #0052a0;}
+.ordermes{ padding-top:10px;}
+.ordermes p{ height:30px; line-height:30px; padding-left:20px;}
+.ddxx span{ float:left; height:48px; width:48px; border:1px solid #ddd; text-align:center; margin:0 3px;}
+
+.page{ float:right; padding-top:10px;}
+.page a{ display:inline-block;color:#aaa;text-align:center; line-height:26px; padding:0 5px;}
+.page a.pre,.page a.nxt{ width:64px; height:26px; border:1px solid #aaa; }
+.page a.shnow{ color:#ff6600;}
+
+
+
+
+

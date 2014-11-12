@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebShopDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="db_AdminInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AdminPwd" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="createTime" Type="datetime" Nullable="false" />
+    <Property Name="realName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_KindInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KindName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="isFather" Type="bit" Nullable="false" />
+    <Property Name="KindId" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_MoneyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MoneyType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Admin" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="adminKey" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="isCan" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_OrderInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserAddressId" Type="int" Nullable="false" />
+    <Property Name="userName" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="priceTote" Type="float" Nullable="false" />
+    <Property Name="SalePriceTote" Type="float" Nullable="false" />
+    <Property Name="createTime" Type="datetime" Nullable="false" />
+    <Property Name="orderStateId" Type="int" Nullable="false" />
+    <Property Name="MoneyType" Type="int" Nullable="false" />
+    <Property Name="PostName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PostMoney" Type="float" Nullable="false" />
+    <Property Name="sendDate" Type="datetime" />
+    <Property Name="payDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="db_orderStateInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_PostInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="postName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="isMain" Type="bit" Nullable="false" />
+    <Property Name="PostPrice" Type="float" Nullable="false" />
+    <Property Name="PostContent" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_ProductImgInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="productId" Type="int" Nullable="false" />
+    <Property Name="orderNum" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_ProductInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CostPrice" Type="float" Nullable="false" />
+    <Property Name="SalePrice" Type="float" Nullable="false" />
+    <Property Name="PContent" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="createTime" Type="datetime" Nullable="false" />
+    <Property Name="CanSaleTime" Type="datetime" Nullable="false" />
+    <Property Name="isFreePost" Type="bit" Nullable="false" />
+    <Property Name="BrandName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KindId" Type="int" Nullable="false" />
+    <Property Name="isSale" Type="bit" Nullable="false" />
+    <Property Name="taobaoUrl" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsUseTaobao" Type="bit" Nullable="false" />
+    <Property Name="isTop" Type="bit" Nullable="false" />
+    <Property Name="TopOrder" Type="int" Nullable="false" />
+    <Property Name="IsHot" Type="bit" Nullable="false" />
+    <Property Name="HotOrder" Type="int" Nullable="false" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_UserAddressInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ZipCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="isMain" Type="bit" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserPwd" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserSex" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="UserBrithday" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserCreateTime" Type="datetime" Nullable="false" />
+    <Property Name="UserLastLoginTime" Type="datetime" Nullable="false" />
+    <Property Name="User" Type="nchar" MaxLength="10" />
+    <Property Name="fristQ" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fristA" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="secondQ" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="secondA" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_db_OrderInfo_AddressInfo">
+    <End Role="db_UserAddressInfo" Type="Self.db_UserAddressInfo" Multiplicity="1" />
+    <End Role="db_OrderInfo" Type="Self.db_OrderInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_UserAddressInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_OrderInfo">
+        <PropertyRef Name="UserAddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_ProductImgInfo_product">
+    <End Role="db_ProductInfo" Type="Self.db_ProductInfo" Multiplicity="1" />
+    <End Role="db_ProductImgInfo" Type="Self.db_ProductImgInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_ProductInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_ProductImgInfo">
+        <PropertyRef Name="productId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_ProductInfo_Kind">
+    <End Role="db_KindInfo" Type="Self.db_KindInfo" Multiplicity="1" />
+    <End Role="db_ProductInfo" Type="Self.db_ProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_KindInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_ProductInfo">
+        <PropertyRef Name="KindId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_UserAddressInfo_UserInfo">
+    <End Role="db_UserInfo" Type="Self.db_UserInfo" Multiplicity="1" />
+    <End Role="db_UserAddressInfo" Type="Self.db_UserAddressInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_UserInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_UserAddressInfo">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebShopDBModelStoreContainer">
+    <EntitySet Name="db_AdminInfo" EntityType="Self.db_AdminInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_KindInfo" EntityType="Self.db_KindInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_MoneyType" EntityType="Self.db_MoneyType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_OrderInfo" EntityType="Self.db_OrderInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_orderStateInfo" EntityType="Self.db_orderStateInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_PostInfo" EntityType="Self.db_PostInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_ProductImgInfo" EntityType="Self.db_ProductImgInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_ProductInfo" EntityType="Self.db_ProductInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_UserAddressInfo" EntityType="Self.db_UserAddressInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_UserInfo" EntityType="Self.db_UserInfo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_db_OrderInfo_AddressInfo" Association="Self.FK_db_OrderInfo_AddressInfo">
+      <End Role="db_UserAddressInfo" EntitySet="db_UserAddressInfo" />
+      <End Role="db_OrderInfo" EntitySet="db_OrderInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_ProductImgInfo_product" Association="Self.FK_db_ProductImgInfo_product">
+      <End Role="db_ProductInfo" EntitySet="db_ProductInfo" />
+      <End Role="db_ProductImgInfo" EntitySet="db_ProductImgInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_ProductInfo_Kind" Association="Self.FK_db_ProductInfo_Kind">
+      <End Role="db_KindInfo" EntitySet="db_KindInfo" />
+      <End Role="db_ProductInfo" EntitySet="db_ProductInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_UserAddressInfo_UserInfo" Association="Self.FK_db_UserAddressInfo_UserInfo">
+      <End Role="db_UserInfo" EntitySet="db_UserInfo" />
+      <End Role="db_UserAddressInfo" EntitySet="db_UserAddressInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

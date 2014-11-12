@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebShopDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="WebShopDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="db_AdminInfo" EntityType="WebShopDBModel.db_AdminInfo" />
+    <EntitySet Name="db_KindInfo" EntityType="WebShopDBModel.db_KindInfo" />
+    <EntitySet Name="db_MoneyType" EntityType="WebShopDBModel.db_MoneyType" />
+    <EntitySet Name="db_OrderInfo" EntityType="WebShopDBModel.db_OrderInfo" />
+    <EntitySet Name="db_orderStateInfo" EntityType="WebShopDBModel.db_orderStateInfo" />
+    <EntitySet Name="db_PostInfo" EntityType="WebShopDBModel.db_PostInfo" />
+    <EntitySet Name="db_ProductImgInfo" EntityType="WebShopDBModel.db_ProductImgInfo" />
+    <EntitySet Name="db_ProductInfo" EntityType="WebShopDBModel.db_ProductInfo" />
+    <EntitySet Name="db_UserAddressInfo" EntityType="WebShopDBModel.db_UserAddressInfo" />
+    <EntitySet Name="db_UserInfo" EntityType="WebShopDBModel.db_UserInfo" />
+    <AssociationSet Name="FK_db_ProductInfo_Kind" Association="WebShopDBModel.FK_db_ProductInfo_Kind">
+      <End Role="db_KindInfo" EntitySet="db_KindInfo" />
+      <End Role="db_ProductInfo" EntitySet="db_ProductInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_OrderInfo_AddressInfo" Association="WebShopDBModel.FK_db_OrderInfo_AddressInfo">
+      <End Role="db_UserAddressInfo" EntitySet="db_UserAddressInfo" />
+      <End Role="db_OrderInfo" EntitySet="db_OrderInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_ProductImgInfo_product" Association="WebShopDBModel.FK_db_ProductImgInfo_product">
+      <End Role="db_ProductInfo" EntitySet="db_ProductInfo" />
+      <End Role="db_ProductImgInfo" EntitySet="db_ProductImgInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_UserAddressInfo_UserInfo" Association="WebShopDBModel.FK_db_UserAddressInfo_UserInfo">
+      <End Role="db_UserInfo" EntitySet="db_UserInfo" />
+      <End Role="db_UserAddressInfo" EntitySet="db_UserAddressInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="db_AdminInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AdminPwd" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="createTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="realName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="db_KindInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KindName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="isFather" Type="Boolean" Nullable="false" />
+    <Property Name="KindId" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="db_ProductInfo" Relationship="WebShopDBModel.FK_db_ProductInfo_Kind" FromRole="db_KindInfo" ToRole="db_ProductInfo" />
+  </EntityType>
+  <EntityType Name="db_MoneyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MoneyType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Admin" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="adminKey" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="isCan" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_OrderInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserAddressId" Type="Int32" Nullable="false" />
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="priceTote" Type="Double" Nullable="false" />
+    <Property Name="SalePriceTote" Type="Double" Nullable="false" />
+    <Property Name="createTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="orderStateId" Type="Int32" Nullable="false" />
+    <Property Name="MoneyType" Type="Int32" Nullable="false" />
+    <Property Name="PostName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PostMoney" Type="Double" Nullable="false" />
+    <Property Name="sendDate" Type="DateTime" Precision="3" />
+    <Property Name="payDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="db_UserAddressInfo" Relationship="WebShopDBModel.FK_db_OrderInfo_AddressInfo" FromRole="db_OrderInfo" ToRole="db_UserAddressInfo" />
+  </EntityType>
+  <EntityType Name="db_orderStateInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="db_PostInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="postName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="isMain" Type="Boolean" Nullable="false" />
+    <Property Name="PostPrice" Type="Double" Nullable="false" />
+    <Property Name="PostContent" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="db_ProductImgInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImgUrl" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="productId" Type="Int32" Nullable="false" />
+    <Property Name="orderNum" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="db_ProductInfo" Relationship="WebShopDBModel.FK_db_ProductImgInfo_product" FromRole="db_ProductImgInfo" ToRole="db_ProductInfo" />
+  </EntityType>
+  <EntityType Name="db_ProductInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CostPrice" Type="Double" Nullable="false" />
+    <Property Name="SalePrice" Type="Double" Nullable="false" />
+    <Property Name="PContent" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="createTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CanSaleTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isFreePost" Type="Boolean" Nullable="false" />
+    <Property Name="BrandName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KindId" Type="Int32" />
+    <Property Name="isSale" Type="Boolean" Nullable="false" />
+    <Property Name="taobaoUrl" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="IsUseTaobao" Type="Boolean" Nullable="false" />
+    <Property Name="isTop" Type="Boolean" Nullable="false" />
+    <Property Name="TopOrder" Type="Int32" Nullable="false" />
+    <Property Name="IsHot" Type="Boolean" Nullable="false" />
+    <Property Name="HotOrder" Type="Int32" Nullable="false" />
+    <Property Name="ImgUrl" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="db_KindInfo" Relationship="WebShopDBModel.FK_db_ProductInfo_Kind" FromRole="db_ProductInfo" ToRole="db_KindInfo" />
+    <NavigationProperty Name="db_ProductImgInfo" Relationship="WebShopDBModel.FK_db_ProductImgInfo_product" FromRole="db_ProductInfo" ToRole="db_ProductImgInfo" />
+  </EntityType>
+  <EntityType Name="db_UserAddressInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="isMain" Type="Boolean" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="db_OrderInfo" Relationship="WebShopDBModel.FK_db_OrderInfo_AddressInfo" FromRole="db_UserAddressInfo" ToRole="db_OrderInfo" />
+    <NavigationProperty Name="db_UserInfo" Relationship="WebShopDBModel.FK_db_UserAddressInfo_UserInfo" FromRole="db_UserAddressInfo" ToRole="db_UserInfo" />
+  </EntityType>
+  <EntityType Name="db_UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserPwd" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserSex" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="UserBrithday" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserEmail" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserCreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserLastLoginTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="User" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="db_UserAddressInfo" Relationship="WebShopDBModel.FK_db_UserAddressInfo_UserInfo" FromRole="db_UserInfo" ToRole="db_UserAddressInfo" />
+  </EntityType>
+  <Association Name="FK_db_ProductInfo_Kind">
+    <End Role="db_KindInfo" Type="WebShopDBModel.db_KindInfo" Multiplicity="0..1" />
+    <End Role="db_ProductInfo" Type="WebShopDBModel.db_ProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_KindInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_ProductInfo">
+        <PropertyRef Name="KindId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_OrderInfo_AddressInfo">
+    <End Role="db_UserAddressInfo" Type="WebShopDBModel.db_UserAddressInfo" Multiplicity="1" />
+    <End Role="db_OrderInfo" Type="WebShopDBModel.db_OrderInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_UserAddressInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_OrderInfo">
+        <PropertyRef Name="UserAddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_ProductImgInfo_product">
+    <End Role="db_ProductInfo" Type="WebShopDBModel.db_ProductInfo" Multiplicity="1" />
+    <End Role="db_ProductImgInfo" Type="WebShopDBModel.db_ProductImgInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_ProductInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_ProductImgInfo">
+        <PropertyRef Name="productId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_UserAddressInfo_UserInfo">
+    <End Role="db_UserInfo" Type="WebShopDBModel.db_UserInfo" Multiplicity="1" />
+    <End Role="db_UserAddressInfo" Type="WebShopDBModel.db_UserAddressInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_UserInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="db_UserAddressInfo">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

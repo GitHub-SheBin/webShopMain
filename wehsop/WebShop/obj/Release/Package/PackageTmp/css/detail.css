@@ -1,0 +1,29 @@
+/* CSS Document */
+
+.marsk{ width:100%; height:100%; position:absolute; top:0; left:0; background:#000; opacity:0.5; z-index:9990;filter:alpha(opacity=50); display:none;}
+.login{ width:400px; height:360px; border:5px solid #b3b3b3; position:fixed; background:#fff; z-index:9999; display:none;}
+.login .login-h{ height:38px; background:url(../images/cartedit_bg.png) repeat-x;}
+.login-h a{ float:right; padding:10px 10px 0 0; width:20px; height:18px; background:url(../images/Button_X.gif) no-repeat left bottom;}
+.login .lg-con{ width:250px; margin:30px auto 0;}
+.login .lg-con p{ height:30px; line-height:30px; }
+.lg-con .username,.lg-con .passw{ height:24px; border:1px solid #ddd; width:100%;}
+.lg-con .forget,.lg-con .reg{ float:right; color:#3366cc;}
+.lg-con .kongjian{ position:relative;top:3px; margin-right:10px;}
+.lg-con .lgin{ display:block; height:30px; background:url(../images/dl.jpg) repeat-x; text-align:center; color:#fff; font-size:20px; line-height:30px;}
+.detail_mes{ padding-top:20px; overflow:hidden; zoom:1; padding-bottom:20px;}
+.detail_mes h1{ height:35px; line-height:35px; padding-bottom:10px;}
+.detail_mes .mesdes{overflow:hidden; zoom:1;}
+.detail_mes .imgsm{ width:200px; height:200px; float:left; border:1px solid #ddd;}
+.detail_mes .protext{ float:right; width:335px; padding-left:10px;}
+.protext .priwrap{ font-size:25px; }
+.protext .pri{ font-size:55px;}
+.protext .sav{ font-size:25px; color:red;font-weight:bold;}
+.protext .adv{font-size:22px; color:#ccc;}
+.detail_mes .buy{ text-align:right; position:relative; height:40px; line-height:40px; padding-top:10px;}
+.detail_mes .prono{ position:absolute; left:10px; bottom:0;}
+
+
+
+
+
+

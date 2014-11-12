@@ -1,0 +1,34 @@
+/* CSS Document */
+.cartedit_headers{ height:50px; line-height:50px; background:url(../images/cartedit_bg.png) repeat-x; font-size:20px; padding-left:10px; font-weight:bold; margin-bottom:20px; color:#fff; }
+.cartedit_t{ border-collapse:collapse; margin-top:20px;}
+.cartedit_t th,.cartedit_t td{ border:1px solid #fff;}
+.cartedit_t th{ background:#e8ecee; padding:5px 0;}
+.cartedit_t td{ background:#f4f9fd; padding:5px ;}
+.cartedit_t th.kong{ width:30px;}
+.cartedit_t th.cp{ width:350px;}
+.cartedit_t th.sl{ width:60px;}
+.cartedit_t th.jg{ width:60px;}
+.cartedit_t th.zj{ width:60px;}
+.cartedit_t td.ko{ text-align:center;}
+.cartedit_t td .cpimg{ float:left;}
+.cartedit_t td .cpms{ float:left; font-size:14px; font-weight:bold; width:260px;}
+.cartedit_t td .cpms2{ float:left; font-size:12px; color:red; font-weight:bold; width:260px;}
+.cartedit_t td .keepon{ float:left;}
+.cartedit_t td .update{ float:right; padding-right:10px;}
+.total{ overflow:hidden; zoom:1;  padding-top:5px; font-size:18px; vertical-align:middle;}
+.total dt{ width:70%; text-align:right; float:left; padding:5px 0;}
+.total dd{ width:30%; text-align:right; float:right;padding:5px 0; }
+.total dd.xj{ color:#00539f; font-weight:bold;}
+.total dd.kd{ color:#00539f;}
+.checkout{ overflow:hidden; zoom:1; margin-top:50px;}
+.checkout .checkout_btn{ width:164px; height:33px; border:1xp solid #d4990f; background:#ffc439; float:right; line-height:33px; text-align:center; font-size:20px; font-weight:bold;}
+
+
+
+
+
+
+
+
+
+

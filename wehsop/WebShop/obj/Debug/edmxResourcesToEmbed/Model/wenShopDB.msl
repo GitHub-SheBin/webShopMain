@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebShopDBModelStoreContainer" CdmEntityContainer="WebShopDBEntities">
+    <EntitySetMapping Name="db_AdminInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_AdminInfo">
+        <MappingFragment StoreEntitySet="db_AdminInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminPwd" ColumnName="AdminPwd" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="realName" ColumnName="realName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_KindInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_KindInfo">
+        <MappingFragment StoreEntitySet="db_KindInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KindName" ColumnName="KindName" />
+          <ScalarProperty Name="isFather" ColumnName="isFather" />
+          <ScalarProperty Name="KindId" ColumnName="KindId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_MoneyType">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_MoneyType">
+        <MappingFragment StoreEntitySet="db_MoneyType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MoneyType" ColumnName="MoneyType" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="adminKey" ColumnName="adminKey" />
+          <ScalarProperty Name="isCan" ColumnName="isCan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_OrderInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_OrderInfo">
+        <MappingFragment StoreEntitySet="db_OrderInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserAddressId" ColumnName="UserAddressId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="priceTote" ColumnName="priceTote" />
+          <ScalarProperty Name="SalePriceTote" ColumnName="SalePriceTote" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="orderStateId" ColumnName="orderStateId" />
+          <ScalarProperty Name="MoneyType" ColumnName="MoneyType" />
+          <ScalarProperty Name="PostName" ColumnName="PostName" />
+          <ScalarProperty Name="PostMoney" ColumnName="PostMoney" />
+          <ScalarProperty Name="sendDate" ColumnName="sendDate" />
+          <ScalarProperty Name="payDate" ColumnName="payDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_orderStateInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_orderStateInfo">
+        <MappingFragment StoreEntitySet="db_orderStateInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_PostInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_PostInfo">
+        <MappingFragment StoreEntitySet="db_PostInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="postName" ColumnName="postName" />
+          <ScalarProperty Name="isMain" ColumnName="isMain" />
+          <ScalarProperty Name="PostPrice" ColumnName="PostPrice" />
+          <ScalarProperty Name="PostContent" ColumnName="PostContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_ProductImgInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_ProductImgInfo">
+        <MappingFragment StoreEntitySet="db_ProductImgInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="orderNum" ColumnName="orderNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_ProductInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_ProductInfo">
+        <MappingFragment StoreEntitySet="db_ProductInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PName" ColumnName="PName" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="PContent" ColumnName="PContent" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="CanSaleTime" ColumnName="CanSaleTime" />
+          <ScalarProperty Name="isFreePost" ColumnName="isFreePost" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="KindId" ColumnName="KindId" />
+          <ScalarProperty Name="isSale" ColumnName="isSale" />
+          <ScalarProperty Name="taobaoUrl" ColumnName="taobaoUrl" />
+          <ScalarProperty Name="IsUseTaobao" ColumnName="IsUseTaobao" />
+          <ScalarProperty Name="isTop" ColumnName="isTop" />
+          <ScalarProperty Name="TopOrder" ColumnName="TopOrder" />
+          <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+          <ScalarProperty Name="HotOrder" ColumnName="HotOrder" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_UserAddressInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_UserAddressInfo">
+        <MappingFragment StoreEntitySet="db_UserAddressInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="isMain" ColumnName="isMain" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_UserInfo">
+      <EntityTypeMapping TypeName="WebShopDBModel.db_UserInfo">
+        <MappingFragment StoreEntitySet="db_UserInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+          <ScalarProperty Name="UserBrithday" ColumnName="UserBrithday" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserCreateTime" ColumnName="UserCreateTime" />
+          <ScalarProperty Name="UserLastLoginTime" ColumnName="UserLastLoginTime" />
+          <ScalarProperty Name="User" ColumnName="User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

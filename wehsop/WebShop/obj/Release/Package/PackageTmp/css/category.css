@@ -1,0 +1,31 @@
+/* CSS Document */
+
+.featured{ width:560px; height:270px; overflow:hidden; padding-bottom:10px;}
+.category_headers{ height:40px; background:#ed1c24; color:#fff; line-height:40px; font-size:16px; padding-left:20px; position:relative;}
+.category_headers span{ float:right; padding-right:20px;}
+.category_headers_sec{ background:#f0f0f0;height:40px;line-height:40px;position:relative;}
+.category_headers .sj{ position:absolute; bottom:-13px; left:30px;}
+.category_headers_sec .sj{ position:absolute;bottom:-20px; left:30px;}
+.category_headers_sec .result{ width:120px; float:left; padding-left:20px;}
+.category_headers_sec .prepage{ width:100px; float:left;}
+.category_headers_sec .pagelist{ float:right; padding-right:10px;}
+.category_headers_sec .pagelist a{padding:0 5px;}
+.category_headers_sec .pagelist a.bbold{ color:#000; font-weight:bold;}
+.category_list{ padding:20px 10px; overflow:hidden; zoom:1;}
+.category_list li{ width:50%; float:left; height:25px; line-height:25px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

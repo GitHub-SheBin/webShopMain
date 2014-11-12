@@ -1,0 +1,27 @@
+/* CSS Document */
+.loginblock{font-weight:bold; float:left;width:400px; margin-top:40px;  }
+.blotit{ font-size:20px; color:#0052a0;padding-left:50px; }
+.blocon{ width:300px; padding-left:50px;}
+.loginblock .blocon p,.regblock .blocon p{color:#0052a0; overflow:hidden; zoom:1; padding:10px 0;}
+.blocon input{ float:right; width:200px; height:25px; line-height:25px; border:1px solid #333;}
+.blocon .forgerpd{ float:right;color:#0052a0;}
+.regblock{color:#0052a0; float:right;width:470px; margin-top:40px;font-weight:bold;border-left:1px solid #0052a0;}
+
+
+.mbcon{ padding-left:80px;}
+.mbcon p{  font-size:14px; padding:8px 0;}
+.mbcon p .mbque{color:#0052a0; width:200px; height:25px; line-height:25px; border:1px solid #000;}
+.mbcon p .daan{width:200px;height:25px; line-height:25px; border:1px solid #000;}
+
+
+
+
+
+
+
+
+
+
+
+
+

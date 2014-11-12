@@ -1,0 +1,31 @@
+/* CSS Document */
+.payhead{ width:880px; margin:0 auto;}
+.paycon{ width:880px; margin:0 auto; overflow:hidden; zoom:1; padding-top:20px;}
+.paycon .paylist{ width:358px; border:1px solid #ddd; float:left; height:1000px;}
+.paylist .paytit{ text-align:center; font-size:14px; line-height:50px; height:50px; font-weight:bold;}
+.paylist .paydl{ overflow:hidden;zoom:1; padding:5px 0; width:320px; margin:0 auto; border-bottom:1px solid #ddd;}
+.paylist .paydl.bgee{background:#eee; border-bottom:none;}
+.paydl dt{ float:left; width:230px; padding:5px 0 5px 10px; color:#666;}
+.paydl dd{ float:right; text-align:center; width:80px; padding-top:5px;}
+.paydl dt a{ color:#084482;}
+.total_price{ text-align:right; font-weight:bold;width:320px; margin:0 auto; height:30px; line-height:30px;}
+.paycon .payway{ float:right; width:490px; padding-left:30px;}
+.payway .filltit{ font-size:16px; height:30px; line-height:30px; padding-bottom:20px;}
+
+.paywaylist{ overflow:hidden; zoom:1;}
+.paywaylist li{ float:left; width:160px;  height:30px; line-height:30px; margin-bottom:10px;}
+.paywaylist li input{ float:left; margin-top:8px; margin-right:10px;}
+
+.payoff{ height:35px; padding-bottom:50px; padding-top:10px;}
+.payoff a{ display:block; width:165px; height:35px; line-height:35px; background:#ff9605; text-align:center; color:#000; font-size:16px;}
+.goback a{ float:right; color:#184184; margin-top:50px;}
+ 
+ 
+.payres{ width:450px;margin:50px auto 0;} 
+.payres .payres_tit{  height:50px; background:url(../images/iccon_01.png) no-repeat 100px 0; line-height:50px; font-size:14px;  }
+.payres .payres_tit.tit_btm{ background-position:100px bottom;}
+.payres p{ height:30px; line-height:30px; padding-left:200px;}
+
+
+
+
