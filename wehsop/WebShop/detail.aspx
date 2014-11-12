@@ -28,9 +28,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main">
             <div class="mbx">
-                <a href="">主页</a><span>></span>
-                <a href="">健康</a><span>></span>
-                减肥
+                <a href="http://www.33sogo.com">主页</a><span>></span>
+                <a href="category.aspx?kid=<%=kid %>"><%=kname%></a><span>></span>
+                <%=cname %>
             </div>
             <div class="detail_mes">
                 <h1><%=pname %></h1>
@@ -48,7 +48,12 @@
                     <a href="<%=taobaoUrl %>"><img src="images/buynow.jpg" width="150" height="36" /></a>
                 </div>
             </div>          
-        
+        <div class="information-wrap">
+         	<div class="information">
+                 <%=pcontent.Replace("\r\n", "<br />") %>
+            </div>
+            <p style="height:30px; padding-top:10px; line-height:30px; text-align:right"><a style="font-size:16px; color:#1271e5;" href="###">查看更多</a></p>
+         </div>     
          <div class="category_box"> 
             <p style="font-size:20px; color:#373737; font-weight:bold; border-bottom:2px solid #ddd; padding-bottom:10px;">购买了该商品的用户还购买了</p>        
             <ul class="procon selling">
@@ -63,7 +68,7 @@
                                 </p>
                                 <a href="detail.aspx?id=<%#Eval("id") %>">
                         	        <p class="price">$<%#Eval("saleprice") %></p>
-                        	        <p class="savedl">SAVE $<%#Convert.ToDouble(Eval("costprice").ToString())-Convert.ToDouble(Eval("saleprice").ToString()) %></p> 
+                        	        <p class="savedl">SAVE $<%#(Convert.ToDouble(Eval("costprice").ToString())-Convert.ToDouble(Eval("saleprice").ToString())).ToString().Replace("\r\n", "<br />") %></p> 
                                 </a>                 
                         </li>
                     </ItemTemplate>
@@ -90,13 +95,13 @@
     	<div class="imgbox">
         	<a href="###"><img src="img/img1.jpg" width="300" height="145" /></a>
         </div>
-        <%--<div class="productlist">
+        <div class="productlist">
         	<p><img src="images/FP_Header.png" width="300" height="51" /></p>
             <div class="adbox"><a href="###"><img src="img/imgad.jpg" width="300" height="250" /></a></div>
         </div>
         <div class="productlist">
         	<p><img src="images/FP_Header.png" width="300" height="51" /></p>
             <div class="adbox"><a href="###"><img src="img/imgad.jpg" width="300" height="250" /></a></div>
-        </div>  --%>     
+        </div>       
     </div>
 </asp:Content>

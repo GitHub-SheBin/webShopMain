@@ -1,0 +1,21 @@
+/* CSS Document */
+.featured_slides{ width:560px;}
+.featured_slides .imground{ height:270px; position:relative;}
+.imground li{ position:absolute; width:0; height:270px; }
+.imground li img{ display:block; width:560px; height:270px;}
+
+.featured_slides .imgcont{ height:25px;text-align:center; font-size:0;padding-top:15px;}
+.imgcont a{ display:inline-block;   width:10px; height:10px; margin:0 2px; }
+.imgcont a.imgitem{ background:url(../images/bullets.png) no-repeat;}
+.imgcont a.prev{ background:url(../images/arrows.png) no-repeat left; margin-right:10px;}
+.imgcont a.next{ background:url(../images/arrows.png) no-repeat right;margin-left:10px;}
+.imgcont a.imgitem.blue{ background:url(../images/bullets.png) no-repeat 0 bottom;}
+
+
+
+
+
+
+
+
+

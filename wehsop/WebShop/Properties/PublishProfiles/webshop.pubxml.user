@@ -7,10 +7,12 @@
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\webshop</_PublishTargetUrl>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Admin/adlist.aspx">
-      <publishTime>11/10/2014 09:36:34</publishTime>
+      <publishTime>11/10/2014 09:36:36</publishTime>
     </File>
     <File Include="Admin/AdminWeb.Master">
       <publishTime>10/27/2014 12:46:02</publishTime>
@@ -190,7 +192,7 @@
       <publishTime>10/27/2014 13:23:04</publishTime>
     </File>
     <File Include="Admin/editAdList.aspx">
-      <publishTime>11/10/2014 12:45:22</publishTime>
+      <publishTime>11/10/2014 12:45:24</publishTime>
     </File>
     <File Include="Admin/EditAdminInfo.aspx">
       <publishTime>10/27/2014 21:26:34</publishTime>
@@ -202,10 +204,10 @@
       <publishTime>10/27/2014 21:22:56</publishTime>
     </File>
     <File Include="Admin/EditProductInfo.aspx">
-      <publishTime>10/27/2014 21:25:44</publishTime>
+      <publishTime>11/10/2014 23:38:48</publishTime>
     </File>
     <File Include="Admin/editSonKindInfo.aspx">
-      <publishTime>11/10/2014 09:24:39</publishTime>
+      <publishTime>11/10/2014 09:24:40</publishTime>
     </File>
     <File Include="Admin/Images/accent.png">
       <publishTime>10/27/2014 13:23:04</publishTime>
@@ -247,7 +249,7 @@
       <publishTime>10/27/2014 13:23:04</publishTime>
     </File>
     <File Include="Admin/index.aspx">
-      <publishTime>11/10/2014 09:32:07</publishTime>
+      <publishTime>11/10/2014 09:32:08</publishTime>
     </File>
     <File Include="Admin/KindList.aspx">
       <publishTime>11/10/2014 00:33:52</publishTime>
@@ -259,7 +261,7 @@
       <publishTime>11/10/2014 00:17:10</publishTime>
     </File>
     <File Include="Admin/productList.aspx">
-      <publishTime>11/10/2014 01:26:50</publishTime>
+      <publishTime>11/10/2014 23:30:14</publishTime>
     </File>
     <File Include="Admin/resources/css/invalid.css">
       <publishTime>10/27/2014 13:23:06</publishTime>
@@ -412,7 +414,7 @@
       <publishTime>10/27/2014 13:23:10</publishTime>
     </File>
     <File Include="Admin/sonKindlist.aspx">
-      <publishTime>11/10/2014 09:30:57</publishTime>
+      <publishTime>11/10/2014 09:30:58</publishTime>
     </File>
     <File Include="Admin/UserAddressList.aspx">
       <publishTime>10/27/2014 19:36:24</publishTime>
@@ -472,7 +474,7 @@
       <publishTime>10/27/2014 10:14:32</publishTime>
     </File>
     <File Include="bin/WebShop.dll">
-      <publishTime>11/10/2014 14:35:38</publishTime>
+      <publishTime>11/10/2014 23:00:22</publishTime>
     </File>
     <File Include="bin/zh-CHT/AspNetPager.resources.dll">
       <publishTime>07/23/2013 08:33:28</publishTime>
@@ -487,7 +489,7 @@
       <publishTime>10/27/2014 10:14:36</publishTime>
     </File>
     <File Include="category.aspx">
-      <publishTime>11/10/2014 01:10:36</publishTime>
+      <publishTime>11/10/2014 22:43:42</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>10/27/2014 10:14:18</publishTime>
@@ -685,7 +687,7 @@
       <publishTime>10/27/2014 12:23:58</publishTime>
     </File>
     <File Include="detail.aspx">
-      <publishTime>11/03/2014 12:02:10</publishTime>
+      <publishTime>11/10/2014 22:59:20</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>10/27/2014 10:14:18</publishTime>
@@ -916,7 +918,7 @@
       <publishTime>10/27/2014 12:23:58</publishTime>
     </File>
     <File Include="index.aspx">
-      <publishTime>11/10/2014 13:05:09</publishTime>
+      <publishTime>11/10/2014 13:05:10</publishTime>
     </File>
     <File Include="js/index.js">
       <publishTime>10/27/2014 12:23:58</publishTime>
@@ -930,8 +932,14 @@
     <File Include="login.aspx">
       <publishTime>11/03/2014 12:02:10</publishTime>
     </File>
+    <File Include="Model/webShopDB.Context.tt">
+      <publishTime>11/10/2014 01:18:00</publishTime>
+    </File>
     <File Include="Model/webShopDB.edmx.diagram">
       <publishTime>11/10/2014 01:18:08</publishTime>
+    </File>
+    <File Include="Model/webShopDB.tt">
+      <publishTime>11/10/2014 01:18:00</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>10/27/2014 10:14:36</publishTime>
@@ -1030,7 +1038,7 @@
       <publishTime>11/03/2014 12:02:10</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/10/2014 09:39:36</publishTime>
+      <publishTime>11/10/2014 23:39:18</publishTime>
     </File>
     <File Include="Web.Master">
       <publishTime>11/10/2014 12:00:36</publishTime>

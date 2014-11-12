@@ -39,7 +39,7 @@
                               展示内容：
                             </td>
                             <td style="width:300px;">
-                                <asp:TextBox ID="tb_content" runat="server" CssClass="text-input" TextMode="MultiLine" Height="93px" Width="381px" ></asp:TextBox>
+                                <asp:TextBox ID="tb_content" runat="server" CssClass="text-input" TextMode="MultiLine" Height="300px" Width="900px" ></asp:TextBox>
                                 
                                
                             </td>

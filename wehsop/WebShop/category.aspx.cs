@@ -43,7 +43,8 @@ namespace WebShop.Web
                     }
                     catch { }
                 }
-               
+                kindName = tkind.getEnityById<db_KindInfo>().KindName;
+                CKid = tkind;
                 Rp_kindListDataBind(tkind);
                 orderty = Request.QueryString["ordertype"] == "0" ? false : true;
             }
@@ -78,7 +79,7 @@ namespace WebShop.Web
                 int tempId = Convert.ToInt32(drv["id"]);
                 HLinfo.NavigateUrl = string.Format("category.aspx?cid={0}",drv["id"]);
                 int count = publicBLL.getWhereCount<db_ProductInfo>(o=>o.KindId==tempId);
-                var tempname=string.Empty;
+               
                 HLinfo.Text = string.Format("{0}({1})",drv["name"],count);
 
                 if (Request.QueryString["cid"] == null)
@@ -87,7 +88,7 @@ namespace WebShop.Web
                     {
                         kid = Convert.ToInt32(drv["id"]);
                         pcount = count.ToString();
-                        tempname=drv["name"].ToString();
+                       
                         kindPager.RecordCount = publicBLL.getWhereCount<db_ProductInfo>(o => o.CanSaleTime < DateTime.Now & o.KindId == kid);
                         Rp_productListDataBind();
                     }
@@ -96,13 +97,13 @@ namespace WebShop.Web
                     if (Request.QueryString["cid"].ToString() == drv["id"].ToString())
                     {
                         pcount = count.ToString();
-                       tempname=drv["name"].ToString();
+                     
                        kindPager.RecordCount = publicBLL.getWhereCount<db_ProductInfo>(o => o.CanSaleTime < DateTime.Now & o.KindId == kid);
                        Rp_productListDataBind();
                     }
                 }
                 
-                kindName = tempname;
+               
             }
         }
 

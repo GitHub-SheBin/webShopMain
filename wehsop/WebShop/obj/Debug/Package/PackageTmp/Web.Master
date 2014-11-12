@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WeB.master.cs" Inherits="WebShop.Web.WeB" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div style="width:100%; background:#a4a4a4; position:relative">
+<div style="width:50%; background:#0052a0; height:113px; position:absolute;top:0; left:50%;"></div>  
+    <div class="header">
+        <div class="text_strip">
+        <ul>
+            <li><a href="###">Store Locations & Hours</a></li>
+            <li><a href="category.aspx?od=<%=kid %>">分类页</a></li>
+            <li><a style="font-weight:bold" href="login.aspx">注 册</a></li>
+            <li><a  style="font-weight:bold"href="login.aspx">登 录</a></li>
+        </ul>
+
+    </div>
+	  <div style="position: absolute;top: -2px;left: 0;"><a href=""><img src="images/logo.jpg" width="445" height="113" /></a></div> 
+  
+    <div class="search">
+    	<div class="cart">
+        	<div class="cart_l">$0.00</div>
+            <div class="cart_r">
+            	<a href="<%=url %>">查看购物车</a>
+            </div>
+        </div>
+        <div class="searchbox">
+        	<input type="text" class="sch" value="搜索产品/品牌" /><a class="serbtn" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="nav">
+	<dl class="nav_item">
+		<dd>
+            <asp:Repeater ID="Rp_kindList" runat="server">
+                <ItemTemplate>
+                   
+                     <a href="/category.aspx?kid=<%#Eval("id") %>"><%#Eval("KindName") %></a>
+
+                    
+                    
+                </ItemTemplate>
+
+            </asp:Repeater>
+           
+            
+        </dd>
+        
+	</dl>
+   <%-- <dl class="nav_item">		
+		<dd>
+            <a href="###">香水</a>
+            <a href="###">维生素</a>
+            <a href="###">感冒与流感</a>
+            <a href="###">婴儿护理</a>
+            <a href="###">戒烟</a>
+            <a href="###">化妆品</a>
+            <a href="###">婴儿护理</a>
+            <a href="###">戒烟</a>
+            <a href="###">化妆品</a>
+            <a href="###">减肥</a>
+            <a href="###">美容</a>
+            <a href="###">性健康</a>
+        </dd>
+        <dt><a href="###">样品</a></dt>
+	</dl>--%>
+</div>
+
+<ul class="title_list">
+	<li class="FS_tile"><a href="###"><img src="images/FS_tile.jpg" width="273" height="40" /></a></li>
+	<li class="No1Pharm_tile"><a href="###"><img src="images/No1Pharm_tile.jpg" width="339" height="40" /></a></li>
+	<li class="LowPrice_tile"><a href="###"><img src="images/LowPrice_tile.jpg" width="268" height="40" /></a></li>
+</ul>
+    <form id="form1" runat="server">
+    <div>
+        <div class="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+             
+       </div>
+    </div>
+    </form>
+    <div class="footer">
+	<div class="signup_wrap">   	
+    	<div class="signup">
+        	<p>加入我们的电子邮件通讯！</p>
+            <div class="sign">
+                <input type="text" class="sig" value="输入电子邮件地址…">
+                <a class="sigbtn" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footbtm">
+    	<dl class="about">
+    		<dt>关于H&M</dt>
+    		<dd><a href="###">H&M概况</a></dd>
+            <dd><a href="###">Investor Relations</a></dd>
+            <dd><a href="###">Corporate Governance</a></dd>
+            <dd><a href="###">可持续发展</a></dd>
+            <dd><a href="###">Conscious Foundation</a></dd>
+    	</dl>
+        
+        <dl class="about">
+    		<dt>新闻与图片</dt>
+    		<dd><a href="###">新闻</a></dd>
+            <dd><a href="###">图片库</a></dd>
+            <dd><a href="###">日历</a></dd>
+    	</dl>
+        
+         <dl class="about">
+    		<dt>品牌</dt>
+    		<dd><a href="###">H&M</a></dd>
+            <dd><a href="###">COS</a></dd>
+            <dd><a href="###">Weekday</a></dd>
+            <dd><a href="###">Cheap Monday</a></dd>
+            <dd><a href="###">Monki</a></dd>
+            <dd><a href="###">& Other Stories</a></dd>
+            
+    	</dl>
+        
+        <dl class="about">
+    		<dt>信息</dt>
+    		<dd><a href="###">联系</a></dd>
+            <dd><a href="###">订阅</a></dd>
+            <dd><a href="###">下载档案</a></dd>
+    		<dd><a href="###">法律声明</a></dd>
+        	<dd><a href="###">网站地图</a></dd>
+        </dl>                        
+    </div>
+
+</div>
+</body>
+</html>

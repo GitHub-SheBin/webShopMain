@@ -1,0 +1,89 @@
+/* CSS Document */
+*{ margin:0; padding:0}
+ul{ list-style:none;}
+a{ text-decoration:none; color:#333;}
+input,img{ border:none;}
+body{ font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+.text_strip{width: 880px; margin:0 auto; text-align:right; height:15px; line-height:15px; position:absolute; top:-20px; left:0;}
+.text_strip li{ display:inline; padding:0 10px;}
+.text_strip li a{ color:#26529d;}
+.header{ width:860px; margin: 21px auto 0; height:100px; border-top:2px solid #003567; border-bottom:1px solid #003567; background:#0052a0; padding:10px 10px 0; position:relative;}
+.header .logo{ position:absolute; top:-25px;}
+.header .slogen{position: absolute;left: 154px;bottom: 9px;}
+.header .search{ width:420px; float:right; height:100px;}
+.header .search .cart{ padding-left:38px; height:35px; border:1px solid #fff; float:right; background:url(../images/basket_img.png) no-repeat 8px center;}
+.search .cart .cart_l{ padding:0 20px; text-align:center;float:left; color:#fff; height:35px; line-height:35px;}
+.search .cart .cart_r{ width:111px; float:right;}
+.search .cart .cart_r a{ display:block; background:#00b513; text-align:center; color:#fff; height:35px; line-height:35px; width:111px; float:right;}
+.header .search .searchbox{ width:416px; border:2px solid #fffe02; float:right; margin-top:10px;}
+.searchbox .sch{ width:298px; height:39px; font-size:16px; color:#999; padding-left:10px;}
+.searchbox .serbtn{ display:block; float:right; width:108px; height:39px; background:url(../images/serbtn.jpg) no-repeat;}
+
+.nav{ width:880px; margin:0 auto;}
+.nav .nav_item{ text-align:center; background:#005294; height:28px; line-height:28px; border-top:1px solid #8d8d8d;}
+.nav .nav_item dt,.nav .nav_item dd{ display:inline; }
+.nav .nav_item dt a{  font-size:14px; color:#fffc00;padding:5px 10px;}
+.nav .nav_item dd a{font-size:14px; color:#fff;padding:5px 10px; background:url(../images/nav_seperator.gif) no-repeat right center;}
+
+.title_list{ width:880px; margin:0 auto; padding:10px 0; overflow:hidden; zoom:1;}
+.title_list li{ float:left;}
+
+.content{ width:880px; margin:0 auto 100px; overflow:hidden; zoom:1;}
+.main{ width:560px; float:left;}
+
+.procon{ padding-top:10px; overflow:hidden; zoom:1; padding-bottom:20px;} 
+.procon .pro_section{ float:left; padding:10px 13px; width:158px; text-align:center; border:1px solid #fff; border-bottom:2px solid #fff;}
+.procon .pro_section.hover{border:1px solid #eee; border-bottom:2px solid #0052a0;}
+.pro_section .link_wrap{ display:block;}
+.pro_section .prodes{ word-wrap:break-word; height:40px;font-weight: bold;color: #6d6e71;}
+.pro_section .prodes a{color: #6d6e71;}
+.pro_section .prodes a:hover{ text-decoration:underline;}
+.pro_section .price{font-size: 30px;letter-spacing: -2px;color: #535353; font-weight:bold;}
+.pro_section .savedl{color: #f1383a;font-size: 16px;letter-spacing: -1px;font-weight: bold;}
+
+.side{ width:300px; float:right;}
+.side .imgbox{ padding-bottom:10px;}
+.side .productlist{ padding-bottom:10px;}
+.side .productlist .adbox{ padding-top:2px;}
+
+.footer{ padding-bottom:50px;}
+.footer .signup_wrap{ height:72px;border-bottom: 2px solid #d3dadf;background:#ff0030 url(../images/footer_pointer.jpg) no-repeat top center; line-height:72px;}
+.footer .signup{ width:840px; padding-left:40px; margin:0 auto; font-size:24px;  color:#fff;}
+.footer .signup p{ float:left;}
+.sign{float:left; padding:18px 0 0 35px;}
+.sign .sig{ float:left;height:33px; padding-left:10px; font-size:14px; border:2px solid #fffe02; width:306px;}
+.sign .sigbtn{ display:block; float:left; padding-left:5px; width:91px; height:37px; background:url(../images/signup.jpg) no-repeat right;}
+
+.footer .footbtm{width:720px; margin:0 auto; padding:20px 80px; font-size:13px; overflow:hidden; zoom:1;}
+.footbtm .about{ width:180px; float:left;color:#666; line-height:20px;}
+.footbtm .about dt{ color:#333;}
+.footbtm .about dd a{ color:#666;}
+
+.mbx{height:30px; line-height:30px; color:#000;}
+.mbx a{ padding:0 5px; color:#000; font-weight:bold;}
+.mbx a:hover{ text-decoration:underline;}
+
+.userside{ float:left; width:120px; }
+.userside dl{ font-size:14px; color:#fff;background:#005294;}
+.userside dl.dl1{ height:120px;}
+.userside dl.dl2{ height:300px;}
+.userside .userside_dl dt{ background:#0073d0;height:26px; line-height:26px; padding-left:10px; font-weight:bold;}
+.userside .userside_dl dd{  text-align:center; height:20px; line-height:20px; padding:10px 0 0px 0;}
+.infocon{ float:right; width:745px;}
+.infocon .infocon_tit{height:26px; line-height:26px; padding-top:30px;color:#0052a0; font-size:14px; font-weight:bold; border-bottom:1px solid #eee;}
+.infocon_box{ padding-top:20px; padding-left:30px;}
+
+.fill_mes{ padding-bottom:20px;}
+.fill_mes p{ padding-bottom:10px; overflow:hidden; zoom:1; color:#666; height:30px; line-height:20px;}
+.fill_mes p.gpw{ color:#0052a0;}
+.gpw input{ width: 200px;border: 1px solid #aaa;height: 23px;}
+
+.fill_mes .shr,.fill_mes .yb,.fill_mes .addr,.fill_mes .mobil,.fill_mes .tel{ width:160px; height:25px; line-height:25px; border:1px solid #999; margin:0 10px;}
+.fill_mes .mes_l{ width:80px; text-align:right; float:left; height:30px; line-height:30px;}
+
+
+.mesipt p{ padding:5px 0; color:#0052a0;}
+.mesipt input{ width:200px; border:1px solid #aaa; height:23px;}
+.mesipt input.yzcode{ width:80px;}
+
+

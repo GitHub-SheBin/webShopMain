@@ -26,6 +26,10 @@ namespace WebShop.Web
 
         public string taobaoUrl = string.Empty;
 
+        public string pcontent = string.Empty;
+        public int kid = 0;
+        public string kname = string.Empty;
+        public string cname = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack){
@@ -36,10 +40,14 @@ namespace WebShop.Web
                         var tempItem = tempId.getEnityById<db_ProductInfo>();
                         imgUrl = tempItem.ImgUrl;
                         pname = tempItem.PName;
+                        kid = tempItem.db_sonkindInfo.kindid;
+                        kname = tempItem.db_sonkindInfo.kindid.getEnityById<db_KindInfo>().KindName;
+                        cname = tempItem.db_sonkindInfo.name;
                         salePrice = Convert.ToDouble(tempItem.SalePrice);
                         costPrice = Convert.ToDouble(tempItem.CostPrice);
                         taobaoUrl = "http://"+tempItem.taobaoUrl;
                         savePrice = costPrice - salePrice;
+                        pcontent = tempItem.PContent;
                         pnum = tempId.ToString("D6");
                         Rp_productList.DataSource = publicBLL.ListToDataTable<db_ProductInfo>(publicBLL.getWhereList<db_ProductInfo>(o => o.BrandName == tempItem.BrandName&o.Id!=tempId).Take(9).ToList());
                         Rp_productList.DataBind();

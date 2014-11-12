@@ -9,8 +9,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main">
             <div class="mbx">
-                <a href="index.aspx">主页</a><span>></span>
-                <a href="category.aspx?id=<%=kid %>"><%=kindName %></a>
+                <a href="/index.aspx">主页</a><span>></span>
+                <a href="/category.aspx?kid=<%=CKid %>"><%=kindName %></a>
                 <%--<span>></span>--%>
                 
             </div>
@@ -68,7 +68,7 @@
                             </p>
                             <a href="product.aspx?id=<%#Eval("id") %>">
                                 <p class="price"><%#Eval("salePrice") %></p>
-                                <p class="savedl">SAVE $<%#Convert.ToInt32(Eval("costprice"))-Convert.ToInt32(Eval("saleprice")) %></p> 
+                                <p class="savedl">SAVE $<%#Convert.ToDouble(Eval("costprice"))-Convert.ToDouble(Eval("saleprice")) %></p> 
                             </a>                 
                     </li>  
 

@@ -28,9 +28,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main">
             <div class="mbx">
-                <a href="">主页</a><span>></span>
-                <a href="">健康</a><span>></span>
-                减肥
+                <a href="http://www.33sogo.com">主页</a><span>></span>
+                <a href="category.aspx?kid=<%=kid %>"><%=kname%></a><span>></span>
+                <%=cname %>
             </div>
             <div class="detail_mes">
                 <h1><%=pname %></h1>
@@ -48,7 +48,12 @@
                     <a href="<%=taobaoUrl %>"><img src="images/buynow.jpg" width="150" height="36" /></a>
                 </div>
             </div>          
-        
+        <div class="information-wrap">
+         	<div class="information">
+                 <%=pcontent %>
+            </div>
+            <p style="height:30px; padding-top:10px; line-height:30px; text-align:right"><a style="font-size:16px; color:#1271e5;" href="###">查看更多</a></p>
+         </div>     
          <div class="category_box"> 
             <p style="font-size:20px; color:#373737; font-weight:bold; border-bottom:2px solid #ddd; padding-bottom:10px;">购买了该商品的用户还购买了</p>        
             <ul class="procon selling">

@@ -129,26 +129,27 @@
                     <asp:Repeater ID="rp_productList" runat="server" OnItemCommand="rp_productList_ItemCommand" OnItemDataBound="rp_productList_ItemDataBound">
                        <ItemTemplate>
                               <tr>
-                                <td>
+                                <td style="vertical-align: middle;">
                                  <input type="checkbox" name="cb_son" value='<%#Eval("id") %>' />
                                  
                                 </td>
-                                <td>
-                                   <%#Eval("pname") %></td>
-                                <td><img src="/<%#Eval("imgUrl") %>"  style="width:200px;height:200px;"/></td>
+                                <td style="vertical-align: middle;">
+                                   <div><%#Eval("pname") %></div>
+                                       </td>
+                                <td style="vertical-align: middle;"><img src="/<%#Eval("imgUrl") %>"  style="width:200px;height:200px;"/></td>
                                
-                                <td><%#Eval("pContent") %></td>
-                                <td><%#Eval("isHot")=="False"?"是":"否" %></td>
-                                <td><%#Eval("Hotorder") %></td>
-                                  <td>
+                                <td style="vertical-align: middle;"><div><%#Eval("pContent").ToString().Length<50?Eval("pContent"): Eval("pContent").ToString().Substring(0,50)+"..."%></div></td>
+                                <td style="vertical-align: middle;"><%#Eval("isHot")=="False"?"是":"否" %></td>
+                                <td style="vertical-align: middle;"><%#Eval("Hotorder") %></td>
+                                  <td style="vertical-align: middle;">
                                       <%#Eval("isTop")=="Fasle"?"是":"否" %>
                                   </td>
-                                  <td><%#Eval("Toporder") %></td>
-                                  <td>
+                                  <td style="vertical-align: middle;"><%#Eval("Toporder") %></td>
+                                  <td style="vertical-align: middle;">
                                       <asp:HyperLink ID="HLimg" runat="server"></asp:HyperLink>
                                   </td>
                                
-                                <td>
+                                <td style="vertical-align: middle;">
                                   <!-- Icons -->
                                   <a href="EditproductInfo.aspx?id=<%#Eval("id") %>" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> 
                                   <asp:LinkButton ID="lb_Detele" runat="server" CommandName="delete" CommandArgument='<%#Eval("id") %>'><img src="resources/images/icons/cross.png" alt="Delete" /></asp:LinkButton>
