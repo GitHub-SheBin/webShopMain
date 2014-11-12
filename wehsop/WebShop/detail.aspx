@@ -90,13 +90,13 @@
     	<div class="imgbox">
         	<a href="###"><img src="img/img1.jpg" width="300" height="145" /></a>
         </div>
-        <div class="productlist">
+        <%--<div class="productlist">
         	<p><img src="images/FP_Header.png" width="300" height="51" /></p>
             <div class="adbox"><a href="###"><img src="img/imgad.jpg" width="300" height="250" /></a></div>
         </div>
         <div class="productlist">
         	<p><img src="images/FP_Header.png" width="300" height="51" /></p>
             <div class="adbox"><a href="###"><img src="img/imgad.jpg" width="300" height="250" /></a></div>
-        </div>       
+        </div>  --%>     
     </div>
 </asp:Content>
